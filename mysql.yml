@@ -18,5 +18,5 @@
         var: query_result.query_result
     - name: Capture Queries in a file
       copy:
-        content: "{{ query_output.query_result }}"
+        content: "{{ query_result.query_result }}"
         dest: /home/ec2-user/application_queries
