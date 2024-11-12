@@ -9,5 +9,5 @@
       community.mysql.mysql_query:
         login_db: RBL
         query:
-        - INSERT INTO apps(appid,name,ip) VALUES("{{ input }}")
+        - INSERT INTO apps(appid,name,ip) VALUES({{ input }})
         single_transaction: true
