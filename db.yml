@@ -3,6 +3,7 @@
   hosts: all
   become: yes
   vars:
+    ansible_python_interpreter: /usr/bin/python3
     mysql_db_name: "rbl_demo"
     mysql_script_name: "mysql_script.sql"
     mysql_validatation_query: "SELECT COUNT(*) FROM rbl_table;"
