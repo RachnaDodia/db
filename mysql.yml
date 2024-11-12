@@ -1,0 +1,14 @@
+---
+- name: CRUD operation on MYSQL
+  hosts: all
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    mysql_db_name: "RBL"
+  tasks:
+    - name: Capture all the application details
+      mysql_query:
+        login_db: "{{ mysql_db_name }}"
+        query: SELECT * FROM apps;
+        login_user: test
+        login_password: 123
