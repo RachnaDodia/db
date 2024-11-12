@@ -12,3 +12,7 @@
         query: SELECT * FROM apps;
         login_user: test
         login_password: 123
+      register: query_result
+    - name: Debug query output
+      debug:
+        var: query_result.query_result
