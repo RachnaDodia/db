@@ -10,15 +10,6 @@
     rows_affected: 2
 #  vars_files:
  #   - db_credentials.yml
-  pre_tasks:
-    - name: Install pip
-      yum:
-        name: pip
-        state: present
-    - name: Install mysql client
-      pip:
-        name: pymysql
-        state: present  
   tasks:
     - name: DB creation Task
       mysql_db:
