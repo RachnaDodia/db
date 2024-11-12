@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   vars:
-    mysql_db_name: rbl_demo
+    mysql_db_name: "rbl_demo"
     mysql_script_name: "mysql_script.sql"
     mysql_validatation_query: "SELECT COUNT(*) FROM rbl_table;"
     rows_affected: 2
