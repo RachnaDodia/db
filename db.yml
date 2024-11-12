@@ -16,7 +16,7 @@
         name: "{{ mysql_db_name }}"
         state: present
         login_user: test
-        login_password: 123
+        login_password: "123"
       register: db_creation_output
 
     - name: Print DB creation logs
