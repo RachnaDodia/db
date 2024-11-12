@@ -4,12 +4,10 @@
   become: yes
   vars:
     ansible_python_interpreter: /usr/bin/python3
-    mysql_db_name: "RBL"
   tasks:
     - name: Run several insert queries against db test_db in single transaction
       community.mysql.mysql_query:
-        login_db: test_db
+        login_db: RBL
         query:
-        - INSERT INTO articles (id, story) VALUES (2, 'my_long_story')
-        - INSERT INTO prices (id, price) VALUES (123, '100.00')
+        - INSERT INTO apps(appid,name,ip) VALUES("{{ input }}")
         single_transaction: true
