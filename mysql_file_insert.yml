@@ -14,7 +14,7 @@
       mysql_db:
         name: RBL
         state: import
-        target: /home/ansible/mysql_script.sql
+        target: /home/ec2-user/mysql_script.sql 
         login_user: test
         login_password: 123
       register: db_import_logs
